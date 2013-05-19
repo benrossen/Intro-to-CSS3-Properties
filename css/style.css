@@ -134,7 +134,6 @@ body {
 	  Note that this won't work in ie8 and below.
 	*/
 	background-color: rgba(255,255,255,.9);
-
 	border-radius: 10px;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -254,6 +253,7 @@ body {
 	right: 89px;
 	margin-top: 20px;
 }
+
 #submit-button:hover {
 	background-color: #ddd;
 }
@@ -262,6 +262,10 @@ body {
 /* listings page */
 #listings-container {
 	margin-top: 20px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px; 
 }
 #listings-container .listing {
 	background-color: #aaa;
@@ -269,19 +273,70 @@ body {
 	border: 1px solid #aaa;
 	margin-right: 72px;
 	position: relative;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px; 
+	-webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.7);
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.7);
+	-webkit-transition: box-shadow 0.2s ease-in-out;
+	-moz-transition: box-shadow 0.2s ease-in-out;
+	-o-transition: box-shadow 0.2s ease-in-out;
+	transition: box-shadow 0.2s ease-in-out;
+
+
 }
+
+#listings-container .listing:hover {
+	box-shadow: 2px 8px 15px rgba(0,0,0,0.4);
+}
+
+#listings-container .listing a {
+	display: block;
+	-webkit-transition: background 0.3s ease-in-out; 
+	-moz-transition: background 0.3s ease-in-out; 
+	-o-transition: background 0.3s ease-in-out; 
+	transition: background 0.3s ease-in-out; 
+	visibility: hidden; 
+	height: 0; 
+}
+
+#listings-container .listing:hover a {
+	width: 250px; 
+	height: 194px; 
+	background: rgba(0,0,0,0.5); 
+	position: absolute;
+	top: 0;
+	text-align: center;
+	line-height: 194px;
+	color: white;
+	text-decoration: none;
+	font-size: 1.2em;
+	visibility: visible; 
+	border-radius: 5px; 
+}
+
+
 #listings-container .photo-container img {
 	width: 250px;
 	height: 150px;
 	display: block;
+	border-radius: 5px 5px 0 0; 
 }
+
 #listings-container .listing-details {
-	border-top: 1px solid #aaa;
 	font-size: 20px;
 	padding: 10px;
+	-webkit-box-shadow: inset 0px 0px 20px rgba(256,256,256,0.3);
+	box-shadow: inset 0px 0px 10px rgba(256,256,256,0.3);
+	border-radius: 0 0 5px 5px; 
+	
 }
+
+
 #listings-container .listing-details div {
 	float: left;
+
 }
 #listings-container .listing-details .bed_bath {
 	float: right;
